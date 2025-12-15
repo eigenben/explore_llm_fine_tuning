@@ -30,6 +30,9 @@ shuffled_dataset = tokenized_datasets["train"].shuffle(seed=42)
 small_split = shuffled_dataset.select(range(num_samples))
 
 # Establish Metrics:
+accuracy = evaluate.load("accuracy")
+f1_score = evaluate.load("f1")
+
 def compute_metrics(pred):
     labels = pred.label_ids
     preds = pred.predictions.argmax(-1)
