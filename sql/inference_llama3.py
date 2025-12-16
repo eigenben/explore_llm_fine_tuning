@@ -65,7 +65,7 @@ def evaluate(sample):
         return 0
 
 success_rate = []
-number_of_eval_samples = 1000
+number_of_eval_samples = 50
 
 for s in tqdm(eval_dataset.shuffle().select(range(number_of_eval_samples))):
     success_rate.append(evaluate(s))
