@@ -7,18 +7,20 @@ requires-python = ">=3.12"
 dependencies = [
     "accelerate>=1.12.0",
     "bitsandbytes>=0.49.0",
-    "datasets>=4.4.1",
+    "datasets==4.3.0",
     "evaluate>=0.4.6",
     "math-verify>=0.8.0",
     "peft>=0.18.0",
     "pillow>=12.0.0",
     "scikit-learn>=1.8.0",
     "sentencepiece>=0.2.1",
-    "torch==2.6.0",
+    "torch==2.8.0",
     "torchvision>=0.21.0",
     "tqdm>=4.67.1",
     "transformers[serving]>=4.57.3",
-    "trl>=0.26.1",
+    "trl>=0.22.2",
+    "unsloth ; sys_platform == 'linux'",
+    "unsloth-zoo ; sys_platform == 'linux'",
     "wandb>=0.23.1",
 ]
 
@@ -26,3 +28,7 @@ dependencies = [
 dev = [
     "ipython>=9.8.0",
 ]
+
+[tool.uv.sources]
+unsloth = { git = "https://github.com/unslothai/unsloth" }
+unsloth-zoo = { git = "https://github.com/unslothai/unsloth-zoo" }
