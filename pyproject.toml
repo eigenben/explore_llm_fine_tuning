@@ -21,6 +21,7 @@ dependencies = [
     "trl>=0.22.2",
     "unsloth ; sys_platform == 'linux'",
     "unsloth-zoo ; sys_platform == 'linux'",
+    "vllm>=0.11.0 ; sys_platform == 'linux'",
     "wandb>=0.23.1",
 ]
 
