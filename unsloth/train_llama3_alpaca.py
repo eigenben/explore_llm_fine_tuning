@@ -15,9 +15,9 @@ model, tokenizer = FastLanguageModel.from_pretrained(
     dtype = None,
     load_in_4bit = True
 )
+model = FastLanguageModel.get_peft_model(model)
 
 # Prepare our Data:
-model = FastLanguageModel.get_peft_model(model)
 dataset = load_dataset("vicgalle/alpaca-gpt4", split="train")
 
 # Convert from columns ['instruction', 'input', 'output', 'text'] => ['conversation']
